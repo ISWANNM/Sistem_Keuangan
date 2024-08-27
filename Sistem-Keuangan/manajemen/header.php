@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Administrator - Sistem Informasi Keuangan</title>
+  <title>Administrator - Sistem Keuangan</title>
   
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <link rel="stylesheet" href="../assets/bower_components/bootstrap/dist/css/bootstrap.min.css">
@@ -19,21 +19,22 @@
   <link rel="stylesheet" href="../assets/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
   <link rel="stylesheet" href="../assets/bower_components/bootstrap-daterangepicker/daterangepicker.css">
   <link rel="stylesheet" href="../assets/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 
   <style>
     body, h1, h2, h3, h4, h5, h6, p, a, .breadcrumb, .small-box, .content-wrapper {
       font-family: 'Montserrat', sans-serif;
     }    
   </style>
-  
+
   <?php 
   include '../koneksi.php';
   session_start();
-  if($_SESSION['status'] != "administrator_logedin"){
+  if($_SESSION['status'] != "manajemen_logedin"){
     header("location:../index.php?alert=belum_login");
   }
   ?>
+
 </head>
 <body class="hold-transition skin-red sidebar-mini">
 
@@ -50,7 +51,7 @@
     <header class="main-header">
       <a href="index.php" class="logo">
         <span class="logo-mini"><b><i class="fa fa-money"></i></b> </span>
-        <span class="logo-lg"><b>SI</b>Keuangan</span>
+        <span class="logo-lg"><b>S</b>Keuangan</span>
       </a>
       <nav class="navbar navbar-static-top">
         <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
@@ -144,21 +145,7 @@
               <i class="fa fa-building"></i> <span>REKENING BANK</span>
             </a>
           </li>
-
-          <li class="treeview">
-            <a href="#">
-              <i class="fa fa-users"></i>
-              <span>DATA PENGGUNA</span>
-              <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span>
-            </a>
-            <ul class="treeview-menu" style="display: none;">
-              <li><a href="user.php"><i class="fa fa-circle-o"></i> Data Pengguna</a></li>
-              <li><a href="user_tambah.php"><i class="fa fa-circle-o"></i> Tambah Pengguna</a></li>
-            </ul>
-          </li>
-
+          
           <li>
             <a href="laporan.php">
               <i class="fa fa-file"></i> <span>LAPORAN</span>

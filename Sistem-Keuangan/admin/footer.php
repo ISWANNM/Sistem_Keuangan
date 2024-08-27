@@ -3,7 +3,7 @@
     <div class="pull-right hidden-xs">
       <b>Version</b> 1.0
     </div>
-    <a href="#" style="color:red"><strong>Copyright &copy; 2024</strong> - Sistem Informasi Laporan Keuangan</a>
+    <a href="#" style="color:red"><strong>Copyright &copy; 2024</strong> - Sistem  Keuangan</a>
   </footer>
 
 
